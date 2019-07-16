@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/project/project",
+    "pages/detail/detail",
+    "pages/message/message",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "培育计划申报",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home@selected.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "我的消息",
+        "iconPath": "images/message.png",
+        "selectedIconPath": "images/message@selected.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "个人设置",
+        "iconPath": "images/setting.png",
+        "selectedIconPath": "images/setting@selected.png"
+      }
+    ],
+    "selectedColor": "#4877ED"
+  },
+  "sitemapLocation": "sitemap.json"
+}

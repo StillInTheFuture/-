@@ -1,0 +1,72 @@
+<view class="container">
+	<view class="title">个人设置</view>
+
+	<form bindsubmit="submitInfo">
+		<view class="pic">
+
+			<image src='/images/share.png' mode="cover"></image>
+		</view>
+
+	    <view class='section'>
+	      <text>真实姓名</text>
+	      <input type='text' name="username" value="{{userInfo.username}}"  disabled='{{inputStatus}}' />
+	    </view>
+	    <view class='section' wx:if="{{isStud}}">
+	      <text>学号</text>
+	      <input type='text' name="studId" value="{{userInfo.params.student_id}}"  disabled='{{inputStatus}}' />
+	    </view>
+
+	    <view class='section'>
+        	<text>所在院系</text>
+	        <view class="select_con">
+	          <view class='list-msg' bindtap='bindShowColl'>
+	            <text>{{college}}</text>
+	          </view>
+	          <view class="select_box" wx:if="{{sel_coll}}">
+	            <view class="select_one" bindtap="selColl" wx:for="{{arrCollege}}" data-name="{{item.title}}" data-id="{{item.id}}" wx:key="{{index}}">
+	              {{item.title}}
+	            </view>
+	          </view>
+	        </view>
+	    </view>
+
+	  	
+
+	    <view class='section' hidden="{{hiddenStu}}" wx:if="{{isStud}}">
+        <text>专业</text>
+        <view class="select_con">
+          <view class='list-msg' bindtap='bindShowMaj'>
+            <text>{{major}}</text>
+          </view>
+          <view class="select_box" wx:if="{{sel_major}}">
+            <view class="select_one" bindtap="selMajor" wx:for="{{arrMajor}}" data-name="{{item.title}}" data-id="{{item.id}}" wx:key="{{index}}">
+              {{item.title}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+	    <view class='section'>
+	      <text>手机号</text>
+	      <input type='number' name="number" value="{{userInfo.number}}" disabled='{{inputStatus}}'/>
+	    </view>
+
+	    <view class='section'>
+	      <text>邮箱</text>
+	      <input type='text' name="email" value="{{userInfo.email}}" disabled='{{inputStatus}}'/>
+	    </view>
+
+	    <view class='button'>
+	      <button type='primary' form-type='submit' hover-class='none' hidden="{{hiddensubmit}}">提交</button>
+	     <!--  <button type='' form-type='' hover-class='none' hidden="{{hiddensubmit}}" bindtap="backInfor">返回</button> -->
+	    </view>
+
+  	</form>
+
+  	<view class="alter_btn" bindtap="alterInfor" hidden="{{hiddenalter}}">
+		<image src='/images/go_edit.png'></image>
+		<text>修改</text>
+	</view>
+
+</view>
+

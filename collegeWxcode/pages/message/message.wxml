@@ -1,0 +1,14 @@
+<view class="container">
+	<view class="title">我的消息</view>
+
+	<block wx:if="{{isMessage}}">
+		<view class="message" wx:for="{{message}}" wx:key="{{index}}">
+			<view class="name">{{item.content.title}}</view>
+			<view class="content">{{item.content.content}}</view>
+			<view class="date">{{item.adddate}}</view>
+		</view>
+	</block>
+
+	<view wx:else>暂无消息</view>
+
+</view>

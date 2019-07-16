@@ -1,0 +1,81 @@
+<view class="container">
+
+	<view class="title">项目详情</view>
+
+  <view class='content'>
+
+
+      <view class='part'>
+        <view class='name'>
+          <text>基本信息</text>
+        </view>
+        <view class='detail'>
+          <view class='list'>
+            <text>项目名称</text>
+            <input type='text' value="{{proDetail.project}}" disabled></input>
+          </view>
+          <view class='list'>
+            <text>申请年份</text>
+            <input type='text' value="{{proDetail.year}}"  disabled></input>
+          </view>
+        </view>
+      </view>
+  
+      <view class='part'>
+
+        <view class='name'>
+          <text>项目介绍</text>
+        </view>
+
+        <view class='detail'>
+
+          <view class='list'>
+            <text>项目描述</text>
+            <textarea disabled>{{proDetail.params.descride}}</textarea>
+          </view>
+
+          <view class='list' wx:if="{{ischeck}}">
+            <text>负责人简介</text>
+            <textarea disabled>{{proDetail.params.personal}}</textarea>
+          </view>
+
+
+           <view class='list download'>
+            <text>附件</text>
+            <navigator url="{{proDetail.files}}">下载附件</navigator>
+          </view>
+          
+          
+
+        </view>
+      </view>
+
+       <view class='part' wx:if="{{!ischeck}}">
+        <view class='name'>
+          <text>负责人信息</text>
+        </view>
+        <view class='detail'>
+          <view class='list'>
+            <text>姓名</text>
+            <input type='text' value="{{chargeInfo.username}}"  disabled></input>
+          </view>
+          <view class='list'>
+            <text>学院</text>
+            <input type='text' value="{{chargeInfo.college.title}}"  disabled></input>
+          </view>
+          <view class='list'>
+            <text>专业</text>
+            <input type='text' value="{{chargeInfo.class.title}}"  disabled></input>
+          </view>
+          <view class='list'>
+            <text>联系方式</text>
+            <input type='text' value="{{chargeInfo.number}}"  disabled></input>
+          </view>
+        </view>
+      </view>
+
+     
+
+  </view>
+
+</view>

@@ -1,0 +1,12 @@
+<view class="container">
+	<view class='header'>
+    	<image src='/images/logo.png' class="logo" /> 
+  	</view>
+	<view class="userinfo">
+	    <image class="userinfo-avatar" src='/images/share.png' mode="cover"></image>
+	    <text class="userinfo-nickname username">{{userInfo.username}}</text>
+	    <text class="userinfo-nickname">{{userInfo.college.title}}</text>
+	    <text class="userinfo-nickname">{{userInfo.class.title}}</text>
+	</view>
+  	<button bindtap='goMyProject'>→ 我的项目</button>
+</view>

@@ -1,0 +1,62 @@
+<view class="container">
+
+	<view class="title">我的项目</view>
+
+	<view wx:if="{{product}}">
+
+		<view class="project_con">
+			<view class="head">今年项目</view>
+			<view class="list" wx:for="{{thisYearPro}}" wx:key="{{index}}">
+				<view class="title_name">
+					<navigator url="/pages/detail/detail?id={{item.id}}" hover-class="none">
+						{{item.project}}
+					</navigator>
+				</view>
+				<view class="note">
+					<block>
+						<text wx:if="{{item.auditing_1==0}}">院系未审核</text>
+						<text wx:elif="{{item.auditing_1==1}}">院系审核通过</text>
+						<text wx:else>院系审核不通过</text>
+					</block>
+					<block>
+						<text wx:if="{{item.auditing_2==0}}">cxcyxy未审核</text>
+						<text wx:elif="{{item.auditing_2==1}}">cxcyxy审核通过</text>
+						<text wx:else>cxcyxy审核不通过</text>
+					</block>
+				</view>
+			
+
+			</view>
+		</view>
+
+		<view class="project_con">
+			<view class="head">往年项目</view>
+			<view class="list" wx:for="{{pastYearsPro}}" wx:key="{{index}}">
+				<view class="title_name">
+					<navigator url="/pages/detail/detail?id={{item.id}}" hover-class="none">
+						{{item.project}}
+					</navigator>
+				</view>
+				<view class="note">
+					<block>
+						<text wx:if="{{item.auditing_1==0}}">院系未审核</text>
+						<text wx:elif="{{item.auditing_1==1}}">院系审核通过</text>
+						<text wx:else>院系审核不通过</text>
+					</block>
+					<block>
+						<text wx:if="{{item.auditing_2==0}}">cxcyxy未审核</text>
+						<text wx:elif="{{item.auditing_2==1}}">cxcyxy审核通过</text>
+						<text wx:else>cxcyxy审核不通过</text>
+					</block>
+				</view>
+			</view>
+		</view>
+		
+	</view>
+	<view class="no_pro" wx:else>暂无项目</view>
+
+	
+
+	
+</view>
+

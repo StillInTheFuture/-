@@ -1,0 +1,42 @@
+/* pages/project/project.wxss */
+.project_con{
+	margin:20px 0;
+}
+/*今往年项目*/
+.head{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	background-color: #f1f1f1;
+	color: #1446a0;
+}
+/*列表*/
+.list{
+	width: 310px;
+	border:1px solid #f1f1f1;
+	border-top: none;
+    padding:14px 10px;
+    position: relative;
+}
+.title_name{
+	color: #4877ed;
+	font-size: 16px;
+	
+}
+.note{
+	font-size: 14px;
+	position: absolute;
+	right: 10px;
+	top: 14px;
+	line-height: 24px;
+	color: #bd1e22;
+}
+.note text{
+	margin-left: 10px;
+}
+.no_pro{
+	padding:15px 0;
+	font-size: 14px;
+}

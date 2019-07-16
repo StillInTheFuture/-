@@ -1,0 +1,32 @@
+<view class='container'>
+
+  <view class='header'>
+    <image src='/images/logo.png' class="logo" /> 
+    <image src='/images/share.png' class="share" />
+  </view>
+
+  <form bindsubmit="formSubmit">
+
+    <view class='section'>
+      <view><image src='/images/user.png' /></view>
+      <input type='text' placeholder='请输入姓名' name="username"/>
+    </view>
+
+    <view class='section'>
+      <view><image src='/images/psw.png' /></view>
+      <input password='true' placeholder='请输入密码' name="password"/>
+    </view>
+
+    <view class='button'>
+      <button type='primary' form-type='submit' hover-class='none'>登录</button>
+    </view>
+
+  </form>
+
+  
+  <view class="note">
+    <navigator url="/pages/register/register" hover-class="navigator-hover">快速注册</navigator>
+    <!-- <navigator url="" hover-class="navigator-hover">忘记密码</navigator> -->
+  </view>
+
+</view>

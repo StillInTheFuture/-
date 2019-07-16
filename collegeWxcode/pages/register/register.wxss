@@ -1,0 +1,88 @@
+.share{
+  width: 310px;
+  height: 200px;
+}
+form{
+  margin-top:20px;
+  width: 310px;
+}
+.section{
+  margin:10px auto 0;
+  width:90%;
+  height:40px;
+  line-height: 40px;
+}
+.section >text{
+  width:25%;
+  height:100%;
+  float: left;
+  font-size: 14px;
+}
+.section input{
+  z-index: 1;
+  width:73%;
+  height:39px;
+  float: left;
+  padding-left: 2%;
+  font-size: 14px;
+  border-bottom:1px solid #e1e1e1;
+}
+/* radio默认时样式 */
+radio .wx-radio-input {
+  border-radius: 3rpx;
+  height: 26rpx;
+  width: 26rpx;
+  margin-top: -4rpx;
+}
+/* radio选中时样式 */
+radio .wx-radio-input.wx-radio-input-checked::before{
+  background-color: #4877ed;
+  border: 4rpx solid #4877ed;
+}
+.section radio-group label{
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.code input{
+  width:40%;
+}
+.code button{
+  display: inline-block;
+  margin:10px 0 0 3%;
+  border:1px solid #bd1e22;
+  color:#bd1e22;
+  background: none;
+  font-size: 14px;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  padding:0;
+}
+.button{
+  margin: 30px auto;
+}
+.button button{
+  background: #4877ed;
+}
+ /*下拉列表*/
+.select_con{
+  position: relative;
+  font-size: 14px;
+}
+.select_box{
+  position: absolute;
+  top: 40px;
+  left: 25%;
+  z-index: 9;
+  width: 75%;
+  max-height: 200px;
+  overflow-y:auto;
+  background-color: #f1f1f1;
+}
+.select_one {
+  padding-left: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+

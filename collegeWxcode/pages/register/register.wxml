@@ -1,0 +1,100 @@
+<view class='container'>
+
+  <view class='header'>
+    <image src='/images/logo.png' class="logo" /> 
+    <image src='/images/share.png' class="share" />
+  </view>
+  
+  <form bindsubmit="registerSubmit">
+
+    <view class='section'>
+      <text>身份</text>
+      <radio-group>
+        <label bindtap="chosedT"><radio name="type" value="{{identity}}" />老师</label>
+        <label bindtap="chosedS"><radio name="type" value="{{identity}}" />学生</label>
+      </radio-group> 
+    </view>
+
+    <view class='section'>
+      <text>姓名</text>
+      <input type='text' placeholder='请输入姓名' name="username"/>
+    </view>
+
+    <view class='section' wx:if="{{!hiddenStu}}">
+      <text>学号</text>
+      <input type='text' placeholder='请输入学号' name="student_id"/>
+    </view>
+
+    <view class='section'>
+      <text>性别</text>
+      <radio-group bindchange="radioSex">
+        <label><radio name="sex" value="1"/>男</label>
+        <label><radio name="sex" value="2"/>女</label>
+      </radio-group> 
+    </view>
+    
+    <!-- <view class='section'>
+      <text>所在院系</text>
+      <input type='text' placeholder='请输入所在院系名称' name="college"/>
+    </view> -->
+      <view class='section'>
+        <text>所在院系</text>
+        <view class="select_con">
+          <view class='list-msg' bindtap='bindShowColl'>
+            <text>{{college}}</text>
+          </view>
+          <view class="select_box" wx:if="{{sel_coll}}">
+            <view class="select_one" bindtap="selColl" wx:for="{{arrCollege}}" data-name="{{item.title}}" data-id="{{item.id}}" wx:key="{{index}}">
+              {{item.title}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='section' wx:if="{{!hiddenStu}}">
+        <text>专业</text>
+        <view class="select_con">
+          <view class='list-msg' bindtap='bindShowMaj'>
+            <text>{{major}}</text>
+          </view>
+          <view class="select_box" wx:if="{{sel_major}}">
+            <view class="select_one" bindtap="selMajor" wx:for="{{arrMajor}}" data-name="{{item.title}}" data-id="{{item.id}}"  wx:key="{{index}}">
+              {{item.title}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+    <view class='section'>
+      <text>邮箱</text>
+      <input type='text' placeholder='请输入邮箱' name="email"/>
+    </view>
+
+    <view class='section'>
+      <text>密码</text>
+      <input password='true' placeholder='请输入密码' name="password"/>
+    </view>
+
+    <view class='section'>
+      <text>确认密码</text>
+      <input password='true' placeholder='请再次输入密码' name="password2"/>
+    </view>
+
+    <view class='section'>
+      <text>手机号</text>
+      <input type='number' placeholder='请输入手机号' name="number" value="{{number}}" bindinput="phoneNumber"/>
+    </view>
+
+    <view class='section code'>
+      <text>验证码</text>
+      <input type='text' name="smscode"/>
+      <button disabled='{{disabled}}' bindtap="getVerificationCode">{{time}}</button>
+    </view>
+
+    <view class='button'>
+      <button type='primary' form-type='submit' hover-class='none'>注册</button>
+    </view>
+
+  </form>
+
+</view>
